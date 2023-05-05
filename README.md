@@ -1,7 +1,7 @@
 ## Excel totals reader
 ## Owner Harrison Bowlby
 
-This is a tool I created for the company Sollid Cabinetry that helps in determining the total counts of certain inventory stock.
+This is a very simple script/tool I created for the company Sollid Cabinetry that helps in determining the total counts of certain inventory stock.
 
 ## Installation
 If you do not have it installed already or are not using Anaconda you will need to install pandas. "pip install pandas" And you'll need python installed if you already do not have it.
