@@ -1,7 +1,10 @@
 import pandas as pd
+import math
 
+valueOfDWEP = 0
 
 def excelReader(sheet):
+    global valueOfDWEP
     # Read the excel file and save each sheet
     spreadsheet = pd.ExcelFile(sheet)
     modelAndQuanityDict = {}
@@ -30,7 +33,10 @@ def excelReader(sheet):
                     or col_name == "Trans Count Qty"
                     or col_name == "Trans Count"
                 ):
-                    modelAndQuanityDict[model_name]["total"] += cell
+                    if(math.isnan(cell)):
+                        modelAndQuanityDict[model_name]["total"] += 0
+                    else:
+                        modelAndQuanityDict[model_name]["total"] += cell
 
     return modelAndQuanityDict
 
