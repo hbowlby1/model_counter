@@ -1,10 +1,7 @@
 import pandas as pd
 import math
 
-valueOfDWEP = 0
-
 def excelReader(sheet):
-    global valueOfDWEP
     # Read the excel file and save each sheet
     spreadsheet = pd.ExcelFile(sheet)
     modelAndQuanityDict = {}
@@ -41,7 +38,7 @@ def excelReader(sheet):
     return modelAndQuanityDict
 
 # convert the returned data to excel
-totals = excelReader("spreadsheets/allCountsForProgram.xlsx")
+totals = excelReader("put your own spreadsheet file here")
 
 df = pd.DataFrame.from_dict(totals, orient="index")
 
