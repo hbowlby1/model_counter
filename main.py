@@ -38,7 +38,7 @@ def excelReader(sheet):
     return modelAndQuanityDict
 
 # convert the returned data to excel
-totals = excelReader("put your own spreadsheet file here")
+totals = excelReader("spreadsheets/allCountsForProgramNoFirstPage.xlsx")
 
 df = pd.DataFrame.from_dict(totals, orient="index")
 
